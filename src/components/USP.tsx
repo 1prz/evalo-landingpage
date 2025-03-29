@@ -24,7 +24,7 @@ const sellingPoints = [
   {
     id: 'support',
     title: 'Dedicated Support',
-    description: 'Our team of experts is always available to help. From implementation to troubleshooting, we're with you every step of the way.',
+    description: "Our team of experts is always available to help. From implementation to troubleshooting, we're with you every step of the way.",
     cta: 'Get support',
     imageBg: 'bg-[#f0fdf4]'
   }
