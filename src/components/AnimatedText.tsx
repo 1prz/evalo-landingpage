@@ -20,7 +20,9 @@ const AnimatedText = ({
   staggerTime = 30,
 }: AnimatedTextProps) => {
   const [visible, setVisible] = useState(initiallyVisible);
-  const elementRef = useRef<HTMLElement | null>(null);
+  
+  // Create a ref with explicit forwardRef compatible typing
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,35 +56,54 @@ const AnimatedText = ({
     };
   }, [delay]);
 
-  // Use a dynamic component based on the element prop
-  const Component = element as keyof JSX.IntrinsicElements;
+  // Render the appropriate element using a switch statement rather than dynamic components
+  // This avoids the TypeScript complexity
+  const renderElement = () => {
+    const content = (
+      <>
+        {text.split(' ').map((word, wordIdx) => (
+          <span key={wordIdx} className="inline-block">
+            {word.split('').map((char, charIdx) => (
+              <span
+                key={`${wordIdx}-${charIdx}`}
+                className={cn(
+                  'inline-block transition-opacity duration-300',
+                  visible ? 'opacity-100' : 'opacity-0'
+                )}
+                style={{
+                  transitionDelay: `${delay + (wordIdx * 2 + charIdx) * staggerTime}ms`,
+                }}
+              >
+                {char}
+              </span>
+            ))}
+            <span className="inline-block">&nbsp;</span>
+          </span>
+        ))}
+      </>
+    );
 
-  return (
-    <Component 
-      ref={elementRef} 
-      className={className}
-    >
-      {text.split(' ').map((word, wordIdx) => (
-        <span key={wordIdx} className="inline-block">
-          {word.split('').map((char, charIdx) => (
-            <span
-              key={`${wordIdx}-${charIdx}`}
-              className={cn(
-                'inline-block transition-opacity duration-300',
-                visible ? 'opacity-100' : 'opacity-0'
-              )}
-              style={{
-                transitionDelay: `${delay + (wordIdx * 2 + charIdx) * staggerTime}ms`,
-              }}
-            >
-              {char}
-            </span>
-          ))}
-          <span className="inline-block">&nbsp;</span>
-        </span>
-      ))}
-    </Component>
-  );
+    switch (element) {
+      case 'h1':
+        return <h1 ref={elementRef} className={className}>{content}</h1>;
+      case 'h2':
+        return <h2 ref={elementRef} className={className}>{content}</h2>;
+      case 'h3':
+        return <h3 ref={elementRef} className={className}>{content}</h3>;
+      case 'h4':
+        return <h4 ref={elementRef} className={className}>{content}</h4>;
+      case 'h5':
+        return <h5 ref={elementRef} className={className}>{content}</h5>;
+      case 'h6':
+        return <h6 ref={elementRef} className={className}>{content}</h6>;
+      case 'span':
+        return <span ref={elementRef} className={className}>{content}</span>;
+      default:
+        return <p ref={elementRef} className={className}>{content}</p>;
+    }
+  };
+
+  return renderElement();
 };
 
 export default AnimatedText;
