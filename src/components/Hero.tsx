@@ -41,7 +41,7 @@ const Hero = () => {
           )}
           style={{ transitionDelay: '100ms' }}
         >
-          Elevating Simplicity<br />Through Perfect Design
+          The future of building assessments<br />Starts Here
         </h1>
         
         <p 
