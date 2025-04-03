@@ -1,12 +1,16 @@
+
 import React, { useEffect, useState } from 'react';
 import Button from './Button';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
   return <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{
@@ -30,7 +34,7 @@ const Hero = () => {
           The future of building assessments<br />Starts Here
         </h1>
         
-        <p className={cn("text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
+        <p className={cn("text-[18px] text-[#52575C] text-center font-figtree font-normal leading-[120%] tracking-[-0.72px] max-w-2xl mx-auto mb-10 transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
         transitionDelay: '200ms'
       }}>On-site assessments
 /
@@ -59,4 +63,5 @@ Work smarter.</p>
       </div>
     </section>;
 };
+
 export default Hero;
