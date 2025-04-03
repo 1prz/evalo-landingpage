@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Button from './Button';
 import { ArrowRight } from 'lucide-react';
@@ -36,7 +37,7 @@ const Hero = () => {
         
         <h1 
           className={cn(
-            "text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight text-gradient transition-all duration-700 transform",
+            "text-center text-[36px] font-extrabold tracking-[0.2px] leading-normal font-figtree transition-all duration-700 transform",
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           )}
           style={{ transitionDelay: '100ms' }}
