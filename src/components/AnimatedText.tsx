@@ -54,11 +54,12 @@ const AnimatedText = ({
     };
   }, [delay]);
 
-  const TextElement = element as keyof JSX.IntrinsicElements;
+  // Use a dynamic component based on the element prop
+  const Component = element as keyof JSX.IntrinsicElements;
 
   return (
-    <TextElement 
-      ref={elementRef as React.RefObject<HTMLHeadingElement>} 
+    <Component 
+      ref={elementRef} 
       className={className}
     >
       {text.split(' ').map((word, wordIdx) => (
@@ -80,7 +81,7 @@ const AnimatedText = ({
           <span className="inline-block">&nbsp;</span>
         </span>
       ))}
-    </TextElement>
+    </Component>
   );
 };
 
