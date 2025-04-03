@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Button from './Button';
 import { ArrowRight } from 'lucide-react';
@@ -14,6 +13,11 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
       <div className="absolute inset-0 z-0 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+          style={{ backgroundImage: 'url(/lovable-uploads/095351c3-1265-4cac-aba6-ced7ff8867e7.png)' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background" />
         <div className="absolute w-[50rem] h-[50rem] rounded-full bg-primary/5 -top-[20rem] -left-[20rem] animate-float" />
         <div className="absolute w-[30rem] h-[30rem] rounded-full bg-primary/5 -bottom-[5rem] -right-[10rem] animate-float animate-delay-700" />
       </div>

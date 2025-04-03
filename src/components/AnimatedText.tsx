@@ -4,61 +4,83 @@ import { cn } from '@/lib/utils';
 
 interface AnimatedTextProps {
   text: string;
-  className?: string;
   element?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-  once?: boolean;
+  className?: string;
   delay?: number;
+  initiallyVisible?: boolean;
+  staggerTime?: number;
 }
 
 const AnimatedText = ({
   text,
-  className,
-  element: Element = 'h2',
-  once = true,
+  element = 'p',
+  className = '',
   delay = 0,
+  initiallyVisible = false,
+  staggerTime = 30,
 }: AnimatedTextProps) => {
-  const textRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [visible, setVisible] = useState(initiallyVisible);
+  const elementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
-          if (once) observer.disconnect();
-        } else if (!once) {
-          setIsVisible(false);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setVisible(true);
+            }, delay);
+            if (elementRef.current) {
+              observer.unobserve(elementRef.current);
+            }
+          }
+        });
       },
-      { threshold: 0.1 }
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1,
+      }
     );
 
-    const currentRef = textRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
       }
     };
-  }, [once, delay]);
+  }, [delay]);
+
+  const TextElement = element as keyof JSX.IntrinsicElements;
 
   return (
-    <Element
-      ref={textRef}
-      className={cn(
-        'transition-all duration-700',
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
-        className
-      )}
+    <TextElement 
+      ref={elementRef as React.RefObject<HTMLHeadingElement>} 
+      className={className}
     >
-      {text}
-    </Element>
+      {text.split(' ').map((word, wordIdx) => (
+        <span key={wordIdx} className="inline-block">
+          {word.split('').map((char, charIdx) => (
+            <span
+              key={`${wordIdx}-${charIdx}`}
+              className={cn(
+                'inline-block transition-opacity duration-300',
+                visible ? 'opacity-100' : 'opacity-0'
+              )}
+              style={{
+                transitionDelay: `${delay + (wordIdx * 2 + charIdx) * staggerTime}ms`,
+              }}
+            >
+              {char}
+            </span>
+          ))}
+          <span className="inline-block">&nbsp;</span>
+        </span>
+      ))}
+    </TextElement>
   );
 };
 
