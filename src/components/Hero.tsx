@@ -1,16 +1,12 @@
-
 import React, { useEffect, useState } from 'react';
 import Button from './Button';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
   return <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{
@@ -23,9 +19,7 @@ const Hero = () => {
       
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="inline-block mb-6">
-          <span className={cn("inline-block px-4 py-1.5 text-sm font-medium bg-accent rounded-full transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")}>
-            The Future is Minimal
-          </span>
+          <span className={cn("inline-block px-4 py-1.5 text-sm font-medium bg-accent rounded-full transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")}>AI-powered.</span>
         </div>
         
         <h1 className={cn("text-center text-[36px] font-extrabold tracking-[0.2px] leading-normal font-figtree transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
@@ -63,5 +57,4 @@ Work smarter.</p>
       </div>
     </section>;
 };
-
 export default Hero;
