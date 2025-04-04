@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+h2{
+  color: var(--Eva-Black-900, #1C1D1F);
+  font-family: var(--fontFamily-fontFamily, Figtree);
+  font-size: var(--fontSize-Heading-sm, 30px);
+  font-style: normal;
+  font-weight: var(--fontWeight-extrabold, 800);
+  line-height: normal;
+  letter-spacing: 0.2px;
+}
+
+h3{
+  color: var(--Eva-Black-400, #52575C);
+  font-family: var(--fontFamily-fontFamily, Figtree);
+  font-size: var(--fontSize-lg, 18px);
+  font-style: normal;
+  font-weight: var(--fontWeight-extrabold, 400);
+  line-height: normal;
+  letter-spacing: 0.2px;
+}

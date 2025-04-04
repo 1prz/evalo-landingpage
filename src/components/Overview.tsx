@@ -4,73 +4,57 @@ import Section from './Section';
 import AnimatedText from './AnimatedText';
 import { CheckCircle } from 'lucide-react';
 
-const keyPoints = [
-  'Focus on essential functionality',
-  'Refined, distraction-free interface',
-  'Thoughtful, intuitive navigation',
-  'Elegant visual design language',
-  'Accessibility-first approach',
-  'Performance optimized experience',
-];
 
 const Overview = () => {
   return (
-    <Section id="overview" className="bg-accent/50">
-      <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-        <div className="order-2 md:order-1">
-          <div className="relative aspect-square max-w-md mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl animate-float" />
-            <div className="absolute inset-4 glass rounded-2xl overflow-hidden">
-              {/* Content placeholder */}
-              <div className="h-full w-full bg-white/30 p-6 flex flex-col">
-                <div className="w-1/2 h-4 bg-primary/10 rounded-full mb-4" />
-                <div className="w-full h-6 bg-primary/10 rounded-full mb-6" />
-                <div className="flex-1 grid grid-cols-2 gap-4">
-                  {[...Array(6)].map((_, i) => (
-                    <div key={i} className="aspect-square rounded-lg bg-primary/5 flex items-center justify-center animate-pulse">
-                      <div className="w-8 h-8 rounded-full bg-primary/10" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="order-1 md:order-2">
-          <div className="inline-block mb-2">
-            <span className="text-sm font-medium px-3 py-1 bg-primary/10 rounded-full">
-              Overview
-            </span>
-          </div>
-          
-          <AnimatedText
-            text="Simplicity is the ultimate sophistication"
-            element="h2"
-            className="text-3xl md:text-4xl font-bold mb-6"
-          />
-          
-          <AnimatedText
-            text="Our approach combines elegance with functionality, creating a seamless experience that puts your needs at the center of every design decision."
-            element="p"
-            className="text-muted-foreground mb-8"
-            delay={200}
-          />
-          
-          <div className="space-y-3">
-            {keyPoints.map((point, index) => (
-              <div 
-                key={index} 
-                className="flex items-start animate-fade-in"
-                style={{ animationDelay: `${200 + (index * 100)}ms` }}
-              >
-                <CheckCircle className="text-primary/70 mr-3 mt-0.5 h-5 w-5 flex-shrink-0" />
-                <p>{point}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+    <Section id="overview" className="min-h-[80vh] flex items-center justify-center relative bg-gradient-to-b from-[#F7F7F7] to-white border-t-2 border-t-white pt-16 pb-24">
+      <div className="z-[-1] absolute top-[-168px] left-0 w-full h-[168px] z-10 bg-[url('/src/assets/Shadow_top.svg')] bg-cover bg-no-repeat bg-top"></div>
+      
+      <div className="order-1 md:order-2 block md:hidden">
+        <img src="/src/assets/Overview.png" alt="Overview Image" className="relative bottom-[-2px] right-[-15%] h-[100%] max-h-[400px]" />
       </div>
+
+      <div className="grid relative md:grid-cols-2 gap-12 md:gap-16 items-center max-w-[1200px] bg-white rounded-2xl border-[#E5E5E5] border">
+          
+          <div className="order-1 md:order-2 hidden md:block ml-10 w-full h-full z-10">
+            <img src="/src/assets/Overview.png" alt="Overview Image" className="md:absolute sm:relative bottom-[-2px] right-[-30%] md:right-[-15%]" />
+          </div>
+          
+          <div className="order-2 md:order-1 max-w-[400px] p-[24px] md:max-w-full md:p-[40px] lg:p-[80px] z-20">
+            
+            {/* <div className="mb-4 animate-fade-in">
+              <div className="inline-block">
+                <span className="text-sm font-medium px-3 py-1 bg-primary/10 rounded-full">
+                  Overview
+                </span>
+              </div>
+            </div> */}
+
+
+            <AnimatedText
+            text="The Problem & Solution"
+            element="h2"
+            className="text-3xl md:text-3xl font-bold mb-2 max-w-48"
+            />
+            
+            <AnimatedText
+            text="Strata corporations must comply, Evalo makes it easy"
+            element="h3"
+            className="text-muted-foreground text-lg mb-12 max-w-72"
+            delay={200}
+            />
+
+            <div className="grid gap-4 text-foreground mb-8 animate-fade-in">
+            <div>
+              With British Columbia’s new regulations, strata corporations must complete Depreciation Reports every five years, <strong>a process that has traditionally been manual</strong>, time-consuming, and inefficient.
+            </div>
+            <div>
+              Evalo is the first platform built for firms conducting Building Assessments and Depreciation Reports, <strong>offering automated workflows</strong> that cut assessment time by over 60%.
+            </div>
+            </div>
+
+          </div>
+          </div>
     </Section>
   );
 };
