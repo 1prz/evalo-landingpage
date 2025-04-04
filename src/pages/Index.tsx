@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Overview from '@/components/Overview';
 import Features from '@/components/Features';
 import USP from '@/components/USP';
+import Compare from '@/components/Compare';
 import Team from '@/components/Team';
 import Purchase from '@/components/Purchase';
 import Footer from '@/components/Footer';
@@ -47,6 +48,7 @@ const Index = () => {
       <Overview />
       <Features />
       <USP />
+      <Compare />
       <Team />
       <Purchase />
       <Footer />

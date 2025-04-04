@@ -35,7 +35,9 @@ const Navbar = () => {
         )}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="#" className="text-xl font-bold text-gradient">Minimal</a>
+          <a href="#" className="text-xl font-bold text-gradient">
+            <img src="src/assets/footerLogo.svg" alt="AI Icon" className="w-auto mx-auto max-h-[32px]" />
+          </a>
           
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -53,10 +55,10 @@ const Navbar = () => {
             <Button 
               variant="primary" 
               size="sm"
-              className="hidden md:flex"
+              className="hidden md:flex rounded-[6px]"
               onClick={() => window.location.href = '#purchase'}
             >
-              Purchase Now
+              Contact
             </Button>
             
             <button

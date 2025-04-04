@@ -7,9 +7,13 @@ const Hero = () => {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  return <section className="relative min-h-[80vh] max-h-[95vh] flex flex-col justify-center items-center text-center px-6 pt-[15vh] bg-cover bg-bottom bg-no-repeat"  style={{
+  return <section className="relative min-h-[80vh] max-h-[95vh] flex flex-col justify-between items-center text-center px-6 pt-[15vh] bg-cover bg-bottom bg-no-repeat"  style={{
     backgroundImage: 'url(src/assets/BG_hero.png)'
   }}>
+      <div className="absolute x-0 y-0 w-full h-full bg-gradient-to-b from-white to-transparent  z-1">
+        {/* <img src="/src/assets/Overview.png" alt="Overview Image" className="md:absolute sm:relative bottom-[-2px] right-[-30%] md:right-[-15%]" /> */}
+      </div>
+    
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background" />
@@ -50,11 +54,11 @@ Work smarter.</p>
         </div>
       </div>
       
-      <div className={cn("overflow-hidden transition-all duration-700", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
+      <div className={cn("flex items-center justify-end w-full overflow-hidden transition-all duration-700", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
         transitionDelay: '400ms'
       }}>
-        <div className="flex items-center justify-center w-full">
-          <img src="src/assets/ImageTopHero.png" alt="AI Icon" className="w-auto h-auto max-w-full max-h-full object-contain animate-float" />
+        <div className="flex mx-auto">
+          <img src="src/assets/ImageTopHero.png" alt="AI Icon" className="w-auto h-auto max-w-full max-h-full mb-[-10px] object-contain animate-float" />
         </div>
       </div>
     </section>;

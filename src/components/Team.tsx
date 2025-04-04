@@ -3,50 +3,107 @@ import React from 'react';
 import Section from './Section';
 import AnimatedText from './AnimatedText';
 import { Github, Linkedin, Twitter } from 'lucide-react';
+import LinkedinIcon from '@/assets/u_linkedin-alt.svg';
 import { cn } from '@/lib/utils';
+
 
 const teamMembers = [
   {
-    name: 'Alex Morgan',
-    role: 'Founder & CEO',
+    name: 'Ziruo Zhang',
+    role: 'PM, Designer',
     bio: 'Visionary leader with 15+ years of experience in design and product development.',
-    image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&q=80&fit=crop',
+    image: 'src/assets/Team/Ziruo.png',
     social: {
       twitter: '#',
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/ziruo-zhang',
       github: '#'
     }
   },
   {
-    name: 'Natalie Chen',
-    role: 'Lead Designer',
+    name: 'Rasul Omarov',
+    role: 'Backend Developer',
     bio: 'Award-winning designer specializing in minimalist interfaces and user experience.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&q=80&fit=crop',
+    image: 'src/assets/Team/Rasul.png',
     social: {
       twitter: '#',
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/rasulomaroff',
       github: '#'
     }
   },
   {
-    name: 'Marcus Kim',
-    role: 'CTO',
+    name: 'Luis Perez',
+    role: 'UX Designer ',
     bio: 'Technical genius with a passion for creating elegant solutions to complex problems.',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&q=80&fit=crop',
+    image: 'src/assets/Team/Luis.png',
     social: {
       twitter: '#',
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/is-luisperez',
       github: '#'
     }
   },
   {
-    name: 'Sophia Rivera',
-    role: 'Customer Success',
+    name: 'Carolina Ferreira',
+    role: 'UX Designer',
     bio: 'Dedicated to ensuring clients have an exceptional experience with our products.',
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&q=80&fit=crop',
+    image: 'src/assets/Team/Carolina.png',
     social: {
       twitter: '#',
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/carolinafgrocha',
+      github: '#'
+    }
+  },
+  {
+    name: 'Hanbee Choi',
+    role: 'UX Designer',
+    bio: 'Dedicated to ensuring clients have an exceptional experience with our products.',
+    image: 'src/assets/Team/Hanbee.png',
+    social: {
+      twitter: '#',
+      linkedin: 'https://www.linkedin.com/in/hanbee-choi',
+      github: '#'
+    }
+  },
+  {
+    name: 'Raul Diaz',
+    role: 'UX Designer',
+    bio: 'Dedicated to ensuring clients have an exceptional experience with our products.',
+    image: 'src/assets/Team/Raul.png',
+    social: {
+      twitter: '#',
+      linkedin: 'https://www.linkedin.com/in/rauldiazbe',
+      github: '#'
+    }
+  },
+  {
+    name: 'Natsuko Ogata',
+    role: 'Front-end Developer',
+    bio: 'Dedicated to ensuring clients have an exceptional experience with our products.',
+    image: 'src/assets/Team/Natsuko.png',
+    social: {
+      twitter: '#',
+      linkedin: 'https://www.linkedin.com/in/natsuko-ogata',
+      github: '#'
+    }
+  },
+  {
+    name: 'Xuehui Lan',
+    role: 'Front-end Developer',
+    bio: 'Dedicated to ensuring clients have an exceptional experience with our products.',
+    image: 'src/assets/Team/Lan.png',
+    social: {
+      twitter: '#',
+      linkedin: 'https://www.linkedin.com/in/xuehui-lan',
+      github: '#'
+    }
+  },
+  {
+    name: 'Tomoki Kaneko',
+    role: 'Fullstack Developer',
+    bio: 'Dedicated to ensuring clients have an exceptional experience with our products.',
+    image: 'src/assets/Team/Tomoki.png',
+    social: {
+      twitter: '#',
+      linkedin: 'https://www.linkedin.com/in/tomoki-kaneko',
       github: '#'
     }
   }
@@ -61,42 +118,38 @@ const TeamMemberCard = ({ member, index }: {
       className="group animate-fade-in"
       style={{ animationDelay: `${100 + (index * 100)}ms` }}
     >
-      <div className="relative overflow-hidden rounded-xl mb-4 aspect-square">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-          <div className="flex space-x-3">
-            <a 
-              href={member.social.twitter} 
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-colors"
-              aria-label={`${member.name}'s Twitter`}
-            >
-              <Twitter size={16} className="text-white" />
-            </a>
-            <a 
-              href={member.social.linkedin} 
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-colors"
-              aria-label={`${member.name}'s LinkedIn`}
-            >
-              <Linkedin size={16} className="text-white" />
-            </a>
-            <a 
-              href={member.social.github} 
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-colors"
-              aria-label={`${member.name}'s GitHub`}
-            >
-              <Github size={16} className="text-white" />
-            </a>
-          </div>
-        </div>
-        <img 
-          src={member.image} 
-          alt={member.name} 
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-        />
+      <div className="relative overflow-hidden rounded-xl mb-4 aspect-3/2">
+ 
+        <a href={member.social.linkedin} aria-label={`${member.name}'s LinkedIn`} target='_blank' rel='noopener noreferrer'>
+
+          <img 
+            src={member.image} 
+            alt={member.name} 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+
+        </a>
+    
       </div>
-      <h3 className="text-xl font-semibold">{member.name}</h3>
-      <p className="text-primary/70 mb-2">{member.role}</p>
-      <p className="text-muted-foreground text-sm">{member.bio}</p>
+      
+      <div className='flex gap-1 justify-between items-center'>
+        <div className='flex flex-col'>
+          <h3 className="text-xl font-semibold">{member.name}</h3>
+          <p className="text-primary/70 mb-2">{member.role}</p>
+        </div>
+        <a 
+            href={member.social.linkedin} 
+            className="w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white hover:bg-primary/10 transition-colors duration-300"
+            aria-label={`${member.name}'s LinkedIn`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+
+            <img src={LinkedinIcon} alt="LinkedIn" className="w-8 h-8" />
+
+          </a>
+      </div>
     </div>
   );
 };
@@ -104,31 +157,38 @@ const TeamMemberCard = ({ member, index }: {
 const Team = () => {
   return (
     <Section id="team">
-      <div className="text-center mb-16">
-        <div className="inline-block mb-2">
-          <span className="text-sm font-medium px-3 py-1 bg-primary/10 rounded-full">
-            Our Team
-          </span>
+      <div className="relative bg-white rounded-[16px] border-2 border-dashed border-[#F7F7F7] p-8 
+  before:content-[''] before:absolute before:inset-[-34px] before:border-2 before:border-dashed before:border-[#F7F7F7] before:rounded-[50px] before:-z-10 
+  after:content-[''] after:absolute after:inset-[-68px] after:border-2 after:border-dashed after:border-[#F7F7F7] after:rounded-[84px] after:-z-20">
+        <div className="text-center mb-16">
+          {/* <div className="inline-block mb-2">
+            <span className="text-sm font-medium px-3 py-1 bg-primary/10 rounded-full">
+              Our Team
+            </span>
+          </div> */}
+          
+          <AnimatedText
+            text="Meet the Experts Behind Evalo"
+            element="h2"
+            className="text-3xl md:text-3xl font-bold mb-2 max-w-72 mx-auto"
+          />
+          
+          {/* <AnimatedText
+            text="A passionate team of professionals dedicated to creating exceptional products."
+            element="h3"
+            className="text-muted-foreground text-lg mb-12"
+            delay={200}
+          /> */}
         </div>
         
-        <AnimatedText
-          text="Meet the people behind the vision"
-          element="h2"
-          className="text-3xl md:text-4xl font-bold mb-6"
-        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-16 max-w-[1000px] mx-auto
         
-        <AnimatedText
-          text="A passionate team of professionals dedicated to creating exceptional products."
-          element="p"
-          className="text-muted-foreground max-w-2xl mx-auto"
-          delay={200}
-        />
-      </div>
-      
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {teamMembers.map((member, index) => (
-          <TeamMemberCard key={index} member={member} index={index} />
-        ))}
+        ">
+          {teamMembers.map((member, index) => (
+            <TeamMemberCard key={index} member={member} index={index} />
+          ))}
+        </div>
+
       </div>
     </Section>
   );
