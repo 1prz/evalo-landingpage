@@ -29,13 +29,15 @@ const Hero = () => {
           The future of building assessments Starts Here
         </h1>
 
-        <p className={cn("text-[18px] text-[#52575C] text-center font-figtree font-normal leading-[120%] tracking-[-0.72px] max-w-2xl mx-auto my-10 transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
+        <p className={cn("text-[18px] text-[#52575C] text-center font-figtree font-normal leading-[120%] tracking-[-0.72px] max-w-2xl mx-auto my-6 transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
         transitionDelay: '200ms'
-      }}>On-site assessments
-/
-Instant reports
-/
-Work smarter.</p>
+      }}>
+          Instant reports
+          /
+          On-site assessments
+          /
+          Work smarter.
+        </p>
 
         <div className={cn("flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
         transitionDelay: '300ms'
