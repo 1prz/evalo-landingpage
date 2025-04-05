@@ -19,10 +19,10 @@ const Button = ({
   const baseClasses = 'inline-flex items-center justify-center rounded-lg font-medium transition-all focus:outline-none focus:ring-2 focus:ring-primary/20 active:scale-[0.98]';
   
   const variantClasses = {
-    primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
-    secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-    ghost: 'bg-transparent hover:bg-accent text-foreground',
-    outline: 'bg-transparent border border-border hover:bg-accent text-foreground',
+    primary: 'bg-primary text-primary-foreground bg-[linear-gradient(253deg,#0342D0_0%,#0251FF_100%)] hover:bg-[linear-gradient(220deg,#0342D0_0%,#0251FF_100%)] transition ease-in-out duration-600',
+    secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80 transition ease-in-out duration-300',
+    ghost: 'bg-transparent hover:bg-accent text-foreground transition ease-in-out duration-300',
+    outline: 'bg-transparent border border-border hover:bg-accent text-foreground transition ease-in-out duration-300',
   };
   
   const sizeClasses = {

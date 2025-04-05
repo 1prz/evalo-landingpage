@@ -47,8 +47,8 @@ Work smarter.</p>
             Learn More <ArrowRight size={16} className="ml-2" />
           </Button> */}
         </div>
-        <div className="inline-block mb-6">
-            <span className={cn("inline-flex items-center pr-4 pl-2 py-2 text-md font-medium border-2 border-black rounded-full transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")}>
+        <div className="text-muted-foreground inline-block mb-6">
+            <span className={cn("inline-flex items-center pr-4 pl-2 py-2 text-md font-medium border-2 border-text-muted-foreground rounded-full transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")}>
             <img src={iconBolt} alt="AI Icon" className="w-6 h-6 mr-2" />
             AI-powered.
             </span>
