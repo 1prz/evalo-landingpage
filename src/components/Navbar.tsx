@@ -36,9 +36,9 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="#" className="text-xl font-bold text-gradient">
-            <img src="src/assets/footerLogo.svg" alt="AI Icon" className="w-auto mx-auto max-h-[32px]" />
+            <img src="assets/footerLogo.svg" alt="AI Icon" className="w-auto mx-auto max-h-[32px]" />
           </a>
-          
+
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -50,17 +50,17 @@ const Navbar = () => {
               </a>
             ))}
           </nav>
-          
+
           <div className="flex items-center space-x-4">
-            <Button 
-              variant="primary" 
+            <Button
+              variant="primary"
               size="sm"
               className="hidden md:flex rounded-[6px]"
               onClick={() => window.location.href = '#purchase'}
             >
               Contact
             </Button>
-            
+
             <button
               className="md:hidden p-2 text-foreground hover:bg-accent rounded-full transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -71,7 +71,7 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-      
+
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}

@@ -43,7 +43,7 @@ const sellingPoints = [
 const USP = () => {
   const [activePoint, setActivePoint] = useState(sellingPoints[0].id);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  
+
 
   useEffect(() => {
     // Auto-rotate through the USPs
@@ -67,31 +67,31 @@ const USP = () => {
   };
 
   const activePointData = sellingPoints.find(p => p.id === activePoint) || sellingPoints[0];
-  
+
 
   return (
     <Section id="usp" className="relative min-h-[80vh] flex items-center justify-center py-[40px] md:py-[80px] lg:py-[200px] ">
-      
+
       <div className='max-w-[1200px] bg-[#F7F7F7] mx-auto rounded-2xl border-[#F1F1F1] border p-[24px] md:p-[40px] lg:p-[80px]'>
-        
+
         <div className=" text-center mb-16">
-          
+
           <div className='pb-12'>
-            <img src="src/assets/LogoIcon_Features.svg" alt="AI Icon" className="w-24 h-24 mx-auto" />
+            <img src="assets/LogoIcon_Features.svg" alt="AI Icon" className="w-24 h-24 mx-auto" />
           </div>
-          
+
           {/* <div className="inline-block mb-2">
             <span className="text-sm font-medium px-3 py-1 bg-primary/10 rounded-full">
               Why Choose Us
             </span>
           </div> */}
-          
+
           <AnimatedText
             text="Transforming the Assessment Process"
             element="h2"
             className="text-3xl font-bold mb-2 max-w-80 text-center mx-auto"
           />
-          
+
           <AnimatedText
             text="The tools you need, in one place"
             element="h3"
@@ -99,18 +99,18 @@ const USP = () => {
             delay={200}
           />
         </div>
-        
+
         <div className="grid lg:grid-cols-1 items-center ">
           <div className="order-1">
             <div className="flex flex-col md:flex-row justify-center items-stretch self-center gap-8 mb-8">
-              
 
-              
+
+
               {sellingPoints.map((point) => (
                 <div className="flex flex-col gap-2 items-start justify-between w-full h-full  md:pb-[100px] p-6 bg-white rounded-lg ">
-                  
+
                   <div className='flex flex-col items-start justify-start gap-4 flex-grow'>
-                  
+
                     {icons[point.icon as keyof typeof icons] && (
                       <span className="text-primary">
                         {React.createElement(icons[point.icon as keyof typeof icons], { size: 40 })}
@@ -131,11 +131,11 @@ const USP = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="flex md:hidden order-2 -1 h-full md:px-10">
             <div className="md:mt-[-100px] relative w-full overflow-hidden rounded-sm md:rounded-3xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.06),_0px_16px_40px_0px_rgba(0,0,0,0.30)]">
               <video
-                src="/src/assets/evalovideos.mp4"
+                src="/assets/evalovideos.mp4"
                 controls
                 autoPlay
                 muted
@@ -149,7 +149,7 @@ const USP = () => {
       <div className="hidden md:flex order-2 -1 h-full ">
             <div className="md:mt-[-140px] lg:mt-[-180px] mx-auto md:max-w[70vw] lg:max-w-[75vw] relative w-full overflow-hidden rounded-sm md:rounded-3xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.06),_0px_16px_40px_0px_rgba(0,0,0,0.30)]">
               <video
-                src="/src/assets/evalovideo.mp4"
+                src="/assets/evalovideo.mp4"
                 controls
                 autoPlay
                 muted

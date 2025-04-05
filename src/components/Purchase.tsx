@@ -8,17 +8,17 @@ import { Check, ChevronRight } from 'lucide-react';
 const Purchase = () => {
   return (
     <Section id="purchase" className="min-h-[80vh] flex items-center justify-center relative bg-gradient-to-b from-white to-[#F7F7F7] pt-16 pb-24">
-      
+
       <div className="items-center max-w-[1200px] bg-white rounded-2xl border-[#E5E5E5] border p-[24px] md:max-w-full md:p-[40px] lg:p-[80px]">
         <div className="md:text-center mb-16">
 
-          
+
           <AnimatedText
             text="Partner With Us"
             element="h2"
             className="text-3xl md:text-3xl font-bold mb-2"
           />
-          
+
           <AnimatedText
             text="Own the future of automated building assessments"
             element="h3"
@@ -28,7 +28,7 @@ const Purchase = () => {
         </div>
 
         <div className='flex flex-col items-center w-full gap-8 mb-8'>
-          
+
           <div className='flex flex-col md:flex-row justify-between w-full gap-8 md:gap-1'>
             <div className='flex flex-col items-start justify-start max-w-72'>
               <h3 className="text-xl font-semibold mb-1">Acquisition Offer</h3>
@@ -44,7 +44,7 @@ const Purchase = () => {
                 className="flex items-center justify-end gap-1 text-sm leading-none text-muted-foreground pl-2 pr-1 py-0.5 bg-white rounded-2xl hover:bg-primary/10 hover:text-primary transition-colors duration-300"
               >
                 Hello@evalo.ca
-                <img src="src/assets/emailSend.svg" alt="" />
+                <img src="assets/emailSend.svg" alt="" />
               </a>
             </div>
           </div>
@@ -65,7 +65,7 @@ const Purchase = () => {
                 className="flex items-center justify-end gap-1 text-sm leading-none text-muted-foreground pl-2 pr-1 py-0.5 bg-white rounded-2xl hover:bg-primary/10 hover:text-primary transition-colors duration-300"
               >
                 EvaloProposal.pdf
-                <img src="src/assets/Download.svg" alt="" />
+                <img src="assets/Download.svg" alt="" />
               </a>
             </div>
           </div>
