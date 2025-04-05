@@ -11,7 +11,7 @@ const Overview = () => {
       <div className="z-[-1] absolute top-[-168px] left-0 w-full h-[168px] z-10 bg-[url('/src/assets/Shadow_top.svg')] bg-cover bg-no-repeat bg-top"></div>
       
       <div className="order-1 md:order-2 block md:hidden">
-        <img src="/src/assets/Overview.png" alt="Overview Image" className="relative bottom-[-2px] right-[-15%] h-[100%] max-h-[400px]" />
+        <img src="/src/assets/Overview.png" alt="Overview Image" className="relative bottom-[-2px] " />
       </div>
 
       <div className="grid relative md:grid-cols-2 gap-12 md:gap-16 items-center max-w-[1200px] bg-white rounded-2xl border-[#E5E5E5] border">
@@ -21,15 +21,6 @@ const Overview = () => {
           </div>
           
           <div className="order-2 md:order-1 max-w-[400px] p-[24px] md:max-w-full md:p-[40px] lg:p-[80px] z-20">
-            
-            {/* <div className="mb-4 animate-fade-in">
-              <div className="inline-block">
-                <span className="text-sm font-medium px-3 py-1 bg-primary/10 rounded-full">
-                  Overview
-                </span>
-              </div>
-            </div> */}
-
 
             <AnimatedText
             text="The Problem & Solution"
