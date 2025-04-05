@@ -54,11 +54,15 @@ Work smarter.</p>
         </div>
       </div>
       
-      <div className={cn("flex items-center justify-end w-full overflow-hidden transition-all duration-700", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
+      <div className={cn("flex items-start justify-center w-full overflow-hidden transition-all duration-700", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")} style={{
         transitionDelay: '400ms'
       }}>
-        <div className="flex mx-auto">
-          <img src="src/assets/ImageTopHero.png" alt="AI Icon" className="w-auto h-auto max-w-full max-h-full mb-[-10px] object-contain animate-float" />
+        <div className="relative flex mx-auto">
+          <img src="src/assets/floating_3.png" alt="AI Icon" className="absolute x-0 y-0 w-auto h-auto max-w-full max-h-full mb-[-10px] object-contain animate-float delay-500" />
+          <img src="src/assets/floating_2.png" alt="AI Icon" className="absolute x-0 y-0 w-auto h-auto max-w-full max-h-full mb-[-10px] object-contain animate-float delay-200 z-20" />
+          <img src="src/assets/ImageTopHero.png" alt="AI Icon" className="w-auto h-auto max-w-full max-h-full mb-[-10px] object-contain animate-float z-10" />
+          <img src="src/assets/floating_1.png" alt="AI Icon" className="absolute x-0 y-0 w-auto h-auto max-w-full max-h-full mb-[-10px] object-contain animate-float delay-600" />
+          <img src="src/assets/floating_0.png" alt="AI Icon" className="absolute x-0 y-0 w-auto h-auto max-w-full max-h-full mb-[-10px] object-contain animate-float delay-1000" />
         </div>
       </div>
     </section>;
