@@ -59,7 +59,7 @@ const Purchase = () => {
             <div className='flex flex-col items-start justify-start md:items-end md:justify-start max-w-72'>
               <h3 className="text-xl font-semibold mb-1">Download Full Proposal</h3>
               <a
-                href="/EvaloProposal.pdf"
+                href="https://langara-my.sharepoint.com/:b:/g/personal/lperezrojas00_mylangara_ca/EcHaLWSjyHdLh0mp_fwRjPYBaAiDpcm55sbmmCLaPz2sqA?e=iqVBB3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-end gap-1 text-sm leading-none text-muted-foreground pl-2 pr-1 py-0.5 bg-white rounded-2xl hover:bg-primary/10 hover:text-primary transition-colors duration-300"
