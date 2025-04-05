@@ -2,14 +2,14 @@
 import React from 'react';
 import Section from './Section';
 import AnimatedText from './AnimatedText';
-import { Layers, Shield, Zap, Users, LineChart, Lightbulb, Gauge, Scale } from 'lucide-react';
+import { Layers, Shield, Zap, Users, LineChart, Lightbulb, Gauge, Scale, Brain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const features = [
   {
-    icon: Zap,
-    title: 'No other app automates this process',
-    description: 'Generic tools require manual work. Evalo is built for assessment firms.'
+    icon: Gauge,
+    title: '80% Faster Report Creation',
+    description: 'Cut report creation time from 20 to 4 hours with our automated workflow.'
   },
   {
     icon: Scale,
@@ -17,9 +17,9 @@ const features = [
     description: 'Meets Strata Property Act requirements for effortless regulatory alignment.'
   },
   {
-    icon: Gauge,
-    title: 'Faster, Smarter, Digital',
-    description: 'Digitize on-site data collection and generate ready-to-use reports instantly.'
+    icon: Brain,
+    title: 'Smart Data Capture',
+    description: 'Record photos, notes, and voice memos—Evalo organizes it all instantly.'
   }
 ];
 

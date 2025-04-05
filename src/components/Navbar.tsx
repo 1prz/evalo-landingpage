@@ -58,7 +58,7 @@ const Navbar = () => {
               className="hidden md:flex rounded-[6px]"
               onClick={() => window.location.href = '#purchase'}
             >
-              Contact
+              Contact us
             </Button>
 
             <button

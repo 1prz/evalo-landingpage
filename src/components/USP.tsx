@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Section from './Section';
 import AnimatedText from './AnimatedText';
-import { ArrowRight, ClipboardCheck, Linkedin, Video, Zap } from 'lucide-react';
+import { ArrowRight, ClipboardCheck, Mic, Sparkles, Video, Zap } from 'lucide-react';
 import Button from './Button';
 import { cn } from '@/lib/utils';
 
@@ -10,33 +10,35 @@ import { cn } from '@/lib/utils';
 const icons = {
   ClipboardCheck,
   Video,
-  Zap
+  Zap,
+  Mic,
+  Sparkles,
 };
 
 const sellingPoints = [
   {
     id: 'performance',
-    title: 'Smart building records',
-    description: ['Store and manage comprehensive building data (structural details, financials, history).','Centralized information hub for efficient tracking and updates.'],
+    title: ' AI-Enhanced Voice to Text',
+    description: ['Turn on-site conversations and spoken notes into editable transcripts fast and accurately.'],
     cta: 'See the numbers',
     imageBg: 'bg-[#eef2ff]',
-    icon: 'Video'
+    icon: 'Mic'
   },
   {
     id: 'design',
-    title: 'AI-Powered on-site assessment',
-    description: ['Capture photos, record audio, and take notes directly from the app.','AI generates transcripts and real-time summaries, eliminating paperwork.'],
+    title: 'Smart Records',
+    description: ['Capture everything on-site; photos, text, and audio, and let Evalo build your report for you.',],
     cta: 'Explore our design',
     imageBg: 'bg-[#faf5ff]',
-    icon: 'ClipboardCheck'
+    icon: 'Zap'
   },
   {
     id: 'support',
-    title: 'Automated report generation',
-    description: ['Detect missing data before finalizing an assessment.','Generate and Share Depreciation & Assessment Reports instantly.'],
+    title: 'Report Generation',
+    description: ['Create and deliver professional-grade assessment and depreciation reports in seconds.',],
     cta: 'Get support',
     imageBg: 'bg-[#f0fdf4]',
-    icon: 'Zap'
+    icon: 'Sparkles'
   }
 ];
 
@@ -149,7 +151,7 @@ const USP = () => {
       <div className="hidden md:flex order-2 -1 h-full ">
             <div className="md:mt-[-140px] lg:mt-[-180px] mx-auto md:max-w[70vw] lg:max-w-[75vw] relative w-full overflow-hidden rounded-sm md:rounded-3xl shadow-[0px_6px_16px_0px_rgba(0,0,0,0.06),_0px_16px_40px_0px_rgba(0,0,0,0.30)]">
               <video
-                src="/assets/evalovideo.mp4"
+                src="/assets/Video/evalovideo.mp4"
                 controls
                 autoPlay
                 muted
