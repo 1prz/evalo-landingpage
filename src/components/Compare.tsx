@@ -2,7 +2,11 @@
 import React from 'react';
 import Section from './Section';
 import AnimatedText from './AnimatedText';
-
+import iconCheck from '../icons/u_check.svg';
+import iconMinusCircle from '../icons/u_minus-circle.svg';
+import iconTimesCircle from '../icons/u_times-circle.svg';
+import iconCheckGrey from '../icons/u_check-grey.svg';
+import iconTimesCircleGrey from '../icons/u_times-circle-grey.svg';
 const Compare = () => {
   return (
     <Section id="overview" className="min-h-[80vh] flex items-center justify-center relative pt-16 pb-24">
@@ -33,22 +37,22 @@ const Compare = () => {
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/assets/table_1.svg" alt="" />
+                                <img src="assets/table_1.svg" alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/assets/table_2.png" alt="" />
+                                <img src="assets/table_2.png" alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/assets/table_3.svg" alt="" />
+                                <img src="assets/table_3.svg" alt="" />
                             </div>
                         </div>
                         <div className="border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/assets/table_4.svg" alt="" />
+                                <img src="assets/table_4.svg" alt="" />
                             </div>
                         </div>
 
@@ -59,23 +63,23 @@ const Compare = () => {
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_check.svg" alt="" />
+                                <img src={iconCheck} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex flex-col items-center space-x-2">
-                                <img src="/src/icons/u_minus-circle.svg" alt="" />
+                                <img src={iconMinusCircle} alt="" />
                                 <span className="text-xs text-[#CECECE] max-w-32 text-left">Requires setup</span>
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
                         <div className="border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
 
@@ -86,22 +90,22 @@ const Compare = () => {
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="//u_check.svg" alt="" />
+                                <img src={iconCheck} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
                         <div className="border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
 
@@ -112,22 +116,22 @@ const Compare = () => {
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="//u_check.svg" alt="" />
+                                <img src={iconCheck} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_check-grey.svg" alt="" />
+                                <img src={iconCheckGrey} alt="" />
                             </div>
                         </div>
                         <div className="border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_check-grey.svg" alt="" />
+                                <img src={iconCheckGrey} alt="" />
                             </div>
                         </div>
 
@@ -138,22 +142,22 @@ const Compare = () => {
                         </div>
                         <div className="border-r border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="//u_check.svg" alt="" />
+                                <img src={iconCheck} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
                         <div className="flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="/src/icons/u_times-circle.svg" alt="" />
+                                <img src={iconTimesCircle} alt="" />
                             </div>
                         </div>
                 </div>

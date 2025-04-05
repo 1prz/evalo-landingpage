@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Button from './Button';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import iconBolt from '../icons/u_bolt-alt.svg';
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -48,7 +49,7 @@ Work smarter.</p>
         </div>
         <div className="inline-block mb-6">
             <span className={cn("inline-flex items-center pr-4 pl-2 py-2 text-md font-medium border-2 border-black rounded-full transition-all duration-700 transform", isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4")}>
-            <img src="/src/icons/u_bolt-alt.svg" alt="AI Icon" className="w-6 h-6 mr-2" />
+            <img src={iconBolt} alt="AI Icon" className="w-6 h-6 mr-2" />
             AI-powered.
             </span>
         </div>
