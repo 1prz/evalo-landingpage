@@ -11,7 +11,7 @@ const Hero = () => {
   return <section className="relative min-h-[80vh] max-h-[95vh] flex flex-col justify-between items-center text-center px-6 pt-[15vh] bg-cover bg-bottom bg-no-repeat"  style={{
     backgroundImage: 'url(assets/BG_hero.png)'
   }}>
-      <div className="absolute x-0 y-0 w-full h-full bg-gradient-to-b from-white to-transparent  z-1">
+      <div className="absolute top-0 bottom-0 left-0 right-0 y-0 w-full h-full bg-gradient-to-b from-white to-transparent  z-1">
         {/* <img src="/assets/Overview.png" alt="Overview Image" className="md:absolute sm:relative bottom-[-2px] right-[-30%] md:right-[-15%]" /> */}
       </div>
 
