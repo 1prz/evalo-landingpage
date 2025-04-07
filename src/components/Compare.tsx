@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import AnimatedText from './AnimatedText';
@@ -7,6 +6,11 @@ import iconMinusCircle from '../icons/u_minus-circle.svg';
 import iconTimesCircle from '../icons/u_times-circle.svg';
 import iconCheckGrey from '../icons/u_check-grey.svg';
 import iconTimesCircleGrey from '../icons/u_times-circle-grey.svg';
+import Table1 from '../icons/Table_1.svg'
+import Table2 from '../icons/Table_2.png'
+import Table3 from '../icons/Table_3.svg'
+import Table4 from '../icons/Table_4.svg'
+
 const Compare = () => {
   return (
     <Section id="overview" className="min-h-[80vh] flex items-center justify-center relative pt-16 pb-24">
@@ -35,24 +39,24 @@ const Compare = () => {
                                 <span className="text-sm text-[#5D6368] max-w-32 text-left">Features </span>
                             </div>
                         </div>
-                        <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
-                            <div className="flex items-center space-x-2">
-                                <img src="assets/table_1.svg" alt="" />
+                        <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-1">
+                            <div className="flex items-center space-x-2 w-full h-full relative">
+                                <img src={Table1} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="assets/table_2.png" alt="" />
+                                <img src={Table2} alt="" />
                             </div>
                         </div>
                         <div className="border-r border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="assets/table_3.svg" alt="" />
+                                <img src={Table3} alt="" />
                             </div>
                         </div>
                         <div className="border-b border-dashed border-[#E5E5E5] flex items-center justify-center p-4">
                             <div className="flex items-center space-x-2">
-                                <img src="assets/table_4.svg" alt="" />
+                                <img src={Table4} alt="" />
                             </div>
                         </div>
 
